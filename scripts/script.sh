@@ -1,0 +1,9 @@
+gpu_id=0 # use 0-th gpu to run the experiments
+
+dataset=DD; lr_adj=2; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=mean --seed=0 --ipc=1 --save=0
+dataset=NCI1; lr_adj=1; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=mean --seed=0 --ipc=1 --save=0
+dataset=ogbg-molhiv; lr_adj=0.01; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=sum --seed=0 --ipc=1 --save=0
+dataset=ogbg-molbace; lr_adj=0.01; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=mean --seed=0 --ipc=1 --save=0
+dataset=ogbg-molbbbp; lr_adj=2; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=mean --seed=0 --ipc=1 --save=0
+dataset=MUTAG; lr_adj=0.1; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=none --pool=mean --seed=0 --ipc=1 --save=0
+dataset=CIFAR10; lr_adj=0.01; lr_feat=0.01; python main.py --dataset ${dataset} --init real  --gpu_id=${gpu_id} --nconvs=3 --dis=mse --lr_adj=${lr_adj} --lr_feat=${lr_feat} --epochs=1000 --eval_init=1  --net_norm=instancenorm --pool=mean --seed=0 --ipc=1 --save=0
