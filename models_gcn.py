@@ -29,9 +29,9 @@ class GCN(torch.nn.Module):
         else:
             from torch_geometric.nn import GCNConv
         self.convs = nn.ModuleList([])
-        self.convs.append(GCNConv(nfeat, nhid, learn_adj=learn_adj))
+        self.convs.append(GCNConv(nfeat, nhid))
         for _ in range(nconvs-1):
-            self.convs.append(GCNConv(nhid, nhid, learn_adj=learn_adj))
+            self.convs.append(GCNConv(nhid, nhid))
 
         self.norms = nn.ModuleList([])
         for _ in range(nconvs):
